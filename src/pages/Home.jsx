@@ -44,7 +44,7 @@ const Home = () => {
                   noOfLines={1}
                   className='mb-3'
                 >
-                Cars, Tractors, Machinery For Rent
+                Cars, Tractors, Machinery WANTED
                 </Box>
               
                 <Link to='/category/rent'>
