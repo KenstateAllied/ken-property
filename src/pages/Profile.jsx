@@ -32,8 +32,8 @@ const Profile = () => {
   const [isEditing, setIsEditing] = useState(false)
 
   const [formData, setFormData] = useState({
-    name: auth.currentUser.displayName,
-    email: auth.currentUser.email,
+    name: auth.curWantedUser.displayName,
+    email: auth.curWantedUser.email,
   })
   const { name, email } = formData
 
@@ -50,7 +50,7 @@ const Profile = () => {
 
       const q = query(
         listingRef,
-        where('userRef', '==', auth.currentUser.uid),
+        where('userRef', '==', auth.curWantedUser.uid),
       )
 
       const querySnap = await getDocs(q)
@@ -67,17 +67,17 @@ const Profile = () => {
     }
 
     fetchUserListings()
-  }, [auth.currentUser.uid])
+  }, [auth.curWantedUser.uid])
 
   const submitHandler = async (e) => {
 
     dispatch({ type: 'START_LOADING' })
     try {
-      if (name !== auth.currentUser.displayName) {
-        await updateProfile(auth.currentUser, {
+      if (name !== auth.curWantedUser.displayName) {
+        await updateProfile(auth.curWantedUser, {
           displayName: name
         })
-        const userRef = doc(db, 'users', auth.currentUser.uid)
+        const userRef = doc(db, 'users', auth.curWantedUser.uid)
         await setDoc(userRef, {
           name,
           email

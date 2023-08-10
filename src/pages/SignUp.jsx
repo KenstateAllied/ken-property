@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import LogoImg from '../images/Kenstate.png'
+import LogoImg from '../images/'
 
 import {
   FormControl,
@@ -60,7 +60,7 @@ const SignUp = () => {
       const user = userCredentials.user
       console.log(user)
       console.log(userCredentials)
-      updateProfile(auth.currentUser, {
+      updateProfile(auth.curWantedUser, {
         displayName: fullName
       })
 
@@ -69,7 +69,7 @@ const SignUp = () => {
       formDataCopy.timestamp = serverTimestamp()
 
       await setDoc(doc(db, 'users', user.uid), formDataCopy)
-      dispatch({ type: 'SET_USER', payload: auth.currentUser.displayName})
+      dispatch({ type: 'SET_USER', payload: auth.curWantedUser.displayName})
       navigate('/')
 
     } catch (error) {

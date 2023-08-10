@@ -1,54 +1,54 @@
 export const cities = [
   {
     id: '1',
-    city: 'Latakia'
+    city: 'Nairobi'
   },
   {
     id: '2',
-    city: 'Damascus'
+    city: 'Mombasa'
   },
   {
     id: '3',
-    city: 'Aleppo'
+    city: 'Kisumu'
   },
   {
     id: '4',
-    city: 'Homs'
+    city: 'Eldoret'
   },
   {
     id: '5',
-    city: 'Hama'
+    city: 'Kericho'
   },
   {
     id: '6',
-    city: 'Damascus Counryside'
+    city: 'Nyeri'
   },
   {
     id: '7',
-    city: 'Daraa'
+    city: 'Kitale'
   },
   {
     id: '8',
-    city: 'Hasaka'
+    city: 'Kakamega'
   },
   {
     id: '9',
-    city: 'Dair Elzor'
+    city: 'Kissi'
   },
   {
     id: '10',
-    city: 'Rakka'
+    city: 'Naivasha'
   },
   {
     id: '11',
-    city: 'Idlib'
+    city: 'Nyahururu'
   },
   {
     id: '12',
-    city: 'Qunaityra'
+    city: 'Nanyuki'
   },
   {
     id: '13',
-    city: 'Tartous'
+    city: 'Narok'
   }
 ]

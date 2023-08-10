@@ -104,7 +104,7 @@ const EditListing = () => {
     }
 
     return () => {
-        isMounted.current = false
+        isMounted.curWanted = false
     }
 
   }, [isMounted])
@@ -165,7 +165,7 @@ const EditListing = () => {
   
           return new Promise((resolve, reject) => {
               const storage = getStorage()
-              const fileName = `${auth.currentUser.uid}-${img.name}-${uuidv4()}`
+              const fileName = `${auth.curWantedUser.uid}-${img.name}-${uuidv4()}`
       
               const storageRef = ref(storage, 'images/' + fileName)
               console.log('this is storageRef ', storageRef)
@@ -310,7 +310,7 @@ const EditListing = () => {
               type='text'
               value={formData.modelName}
               onChange={changeHandler}
-              placeholder='ex. Toyota Camry'
+              placeholder='TOYOTA'
             />
         </FormControl>
 
@@ -330,7 +330,7 @@ const EditListing = () => {
           }))})} value={formData.type}>
             <Stack spacing={5} direction='row'>
               <Radio colorScheme='teal' value='sale'>Sale</Radio>
-              <Radio colorScheme='teal' value='rent'>Rent</Radio>
+              <Radio colorScheme='teal' value='Wanted'>Wanted</Radio>
             </Stack>
           </RadioGroup> 
         </FormControl>

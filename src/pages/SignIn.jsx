@@ -2,7 +2,7 @@ import { useState, useContext, useEffect, useRef } from 'react'
 import { signInWithEmailAndPassword, getAuth, onAuthStateChanged } from 'firebase/auth'
 import { Link, useNavigate } from 'react-router-dom'
 import LoadingContext from '../contexts/loading/LoadingContext'
-import LogoImg from '../images/Kenstate.png'
+import LogoImg from '../images/logo.png'
 import {
   FormControl,
   FormLabel,
@@ -42,7 +42,7 @@ export default function SignIn() {
     }
 
     return () => {
-        isMounted.current = false
+        isMounted.curWanted = false
     }
 
   }, [isMounted])

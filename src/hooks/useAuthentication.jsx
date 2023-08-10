@@ -19,7 +19,7 @@ const useAuthentication = () => {
     }
 
     return () => {
-        mounted.current = false
+        mounted.curWanted = false
     }
 
   }, [mounted])

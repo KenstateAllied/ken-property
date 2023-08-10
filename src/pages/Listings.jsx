@@ -40,15 +40,15 @@ const Listings = () => {
         }
        
       }
-    fetchCars()
+    //fetchCars()
   }, [params.categoryName])
 
   return (
     <>
         <Heading as='h2' size='xl' mb='2rem' ml='6rem'>
-            {params.categoryName === 'rent' 
-                ? 'Cars, Tractors, Machinery WANTED'
-                : 'Cars, Tractors, Machinery For Sale'
+            {params.categoryName === 'Wanted' 
+                ? 'Cars, Tractors, Machinery, Spares WANTED'
+                : 'Cars, Tractors, Machinery, Spares For Sale'
             }
         </Heading>
         {loading ? <ScaleSpinner /> : cars && cars.length > 0 ?
@@ -74,7 +74,7 @@ const Listings = () => {
               >
                 <AlertIcon boxSize='40px' mr={0} />
                 <AlertTitle mt={4} mb={1} fontSize='lg'>Error occured!</AlertTitle>
-                <AlertDescription maxWidth='sm'>Please consider using a VPN if you live in <span className='font-bold'>Syria</span> or other countires where Firebase services are blocked.</AlertDescription>
+                <AlertDescription maxWidth='sm'>We are resolving Google Cloud Database issues in <span className='font-bold'>KENYA</span> Kindly send us details of what you are buying or selling by whatsapp +254 724 052 417.</AlertDescription>
               </Alert>
           
         }

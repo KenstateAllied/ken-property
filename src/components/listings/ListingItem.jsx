@@ -93,11 +93,11 @@ const ListingItem = ( { data, id, deleteListing, editListing } ) => {
       <div className="basis-1/4 relative">
         
           <Box>
-            <Text fontSize='2xl'>{data.type === 'rent' ? 'Rent' : 'Price'}</Text>
+            <Text fontSize='2xl'>{data.type === 'Wanted' ? 'Wanted' : 'Price'}</Text>
             <Text fontSize='2xl' as={data.offer && 's'} className='font-bold'>
               {data.price} $ 
             </Text>
-            <span className='text-sm mx-1'>{data.type === 'rent' ? '/Month' : 'Total'}</span>
+            <span className='text-sm mx-1'>{data.type === 'Wanted' ? '/Month' : 'Total'}</span>
             {data.offer && <Text className='text-orange-500	font-bold	'>{data.discountedPrice} $</Text>}
           </Box>
 

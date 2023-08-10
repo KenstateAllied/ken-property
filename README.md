@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://e-commerce-react-firebase.vercel.app">
-    <img src="src/images/kenstate.png" alt="Logo">
+    <img src="src/images/logo.png" alt="Logo">
   </a>
 
   <h3 align="center">Autotrac</h3>
@@ -49,7 +49,7 @@
 [![Product Name Screen Shot][product-screenshot]](https://e-commerce-react-firebase.vercel.app)
 
 I designed and created this cars online retailing application using React.js and Firebase from A to Z.
-Autotrac is an online cars trade application that let you post your selling or renting car advertisment. 
+Autotrac is an online cars trade application that let you post your selling or Wanteding car advertisment. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

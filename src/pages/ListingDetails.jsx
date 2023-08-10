@@ -103,9 +103,9 @@ const ListingDetails = () => {
 
               <ListItem as={carListing.offer && 's'}>
                 <ListIcon as={AiFillCheckCircle} color='orange.500' />
-                {carListing.type === 'sale' ? 'Price:' : 'Rent:'}  &emsp;
+                {carListing.type === 'sale' ? 'Price:' : 'Wanted:'}  &emsp;
                 { ' ' } {carListing.price} $ { ' ' }
-                {carListing.type === 'rent' && '/Month'} 
+                {carListing.type === 'Wanted' && '/Month'} 
                 <Divider variant='solid' />
               </ListItem>
               
@@ -139,7 +139,7 @@ const ListingDetails = () => {
 
         </List>
 
-          {auth.currentUser?.uid !== carListing.userRef && 
+          {auth.curWantedUser?.uid !== carListing.userRef && 
           <Link to={`/contact/${carListing.userRef}?listingName=${carListing.modelName}`}>
            <Button
             className='my-4'
